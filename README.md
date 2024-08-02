@@ -11,7 +11,7 @@
 </a>
 </p>
 
-<h1 align="center">Deploy Drupal 10 on Platform.sh</h1>
+<h1 align="center">Deploy Drupal 11 on Platform.sh</h1>
 
 <p align="center">
 <strong>Contribute, request a feature, or check out our resources</strong>
@@ -20,23 +20,23 @@
 <a href="https://community.platform.sh"><strong>Join our community</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 <a href="https://docs.platform.sh"><strong>Documentation</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 <a href="https://platform.sh/blog"><strong>Blog</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="https://github.com/platformsh-templates/drupal10/issues/new?assignees=&labels=bug&template=bug_report.yml"><strong>Report a bug</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="https://github.com/platformsh-templates/drupal10/issues/new?assignees=&labels=feature+request&template=improvements.yml"><strong>Request a feature</strong></a>
+<a href="https://github.com/platformsh-templates/drupal11/issues/new?assignees=&labels=bug&template=bug_report.yml"><strong>Report a bug</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="https://github.com/platformsh-templates/drupal11/issues/new?assignees=&labels=feature+request&template=improvements.yml"><strong>Request a feature</strong></a>
 <br /><br />
 </p>
 
 <p align="center">
-<a href="https://github.com/platformsh-templates/drupal10/issues">
-<img src="https://img.shields.io/github/issues/platformsh-templates/drupal10.svg?style=for-the-badge&labelColor=f4f2f3&color=ffd9d9&label=Issues" alt="Open issues" />
+<a href="https://github.com/platformsh-templates/drupal11/issues">
+<img src="https://img.shields.io/github/issues/platformsh-templates/drupal11.svg?style=for-the-badge&labelColor=f4f2f3&color=ffd9d9&label=Issues" alt="Open issues" />
 </a>&nbsp&nbsp
-<a href="https://github.com/platformsh-templates/drupal10/pulls">
-<img src="https://img.shields.io/github/issues-pr/platformsh-templates/drupal10.svg?style=for-the-badge&labelColor=f4f2f3&color=ffd9d9&label=Pull%20requests" alt="Open PRs" />
+<a href="https://github.com/platformsh-templates/drupal11/pulls">
+<img src="https://img.shields.io/github/issues-pr/platformsh-templates/drupal11.svg?style=for-the-badge&labelColor=f4f2f3&color=ffd9d9&label=Pull%20requests" alt="Open PRs" />
 </a>&nbsp&nbsp
-<a href="https://github.com/platformsh-templates/drupal10/blob/master/LICENSE">
+<a href="https://github.com/platformsh-templates/drupal11/blob/master/LICENSE">
 <img src="https://img.shields.io/static/v1?label=License&message=MIT&style=for-the-badge&labelColor=f4f2f3&color=ffd9d9" alt="License" />
 </a>&nbsp&nbsp
 <br /><br />
-<a href="https://console.platform.sh/projects/create-project/?template=https://raw.githubusercontent.com/platformsh/template-builder/master/templates/drupal10/.platform.template.yaml&utm_campaign=deploy_on_platform?utm_medium=button&utm_source=affiliate_links&utm_content=https://raw.githubusercontent.com/platformsh-templates/drupal10/updates/.platform.template.yaml" target="_blank" title="Deploy with Platform.sh"><img src="https://platform.sh/images/deploy/deploy-button-lg-blue.svg" width="175px"></a>
+<a href="https://console.platform.sh/projects/create-project/?template=https://raw.githubusercontent.com/platformsh/template-builder/master/templates/drupal11/.platform.template.yaml&utm_campaign=deploy_on_platform?utm_medium=button&utm_source=affiliate_links&utm_content=https://raw.githubusercontent.com/platformsh-templates/drupal11/updates/.platform.template.yaml" target="_blank" title="Deploy with Platform.sh"><img src="https://platform.sh/images/deploy/deploy-button-lg-blue.svg" width="175px"></a>
 </p>
 </p>
 
@@ -62,8 +62,8 @@ Drupal is a flexible and extensible PHP-based CMS framework.
 
 ### Features
 
-- PHP 8.2
-- MariaDB 10.11
+- PHP 8.3
+- MariaDB 10.6
 - Redis 7.2
 - Drush included
 - Automatic TLS certificates
@@ -81,7 +81,7 @@ The quickest way to deploy this template on Platform.sh is by clicking the butto
 This will automatically create a new project and initialize the repository for you.
 
 <p align="center">
-    <a href="https://console.platform.sh/projects/create-project/?template=https://raw.githubusercontent.com/platformsh/template-builder/master/templates/drupal10/.platform.template.yaml">
+    <a href="https://console.platform.sh/projects/create-project/?template=https://raw.githubusercontent.com/platformsh/template-builder/master/templates/drupal11/.platform.template.yaml">
         <img src="https://platform.sh/images/deploy/lg-blue.svg" alt="Deploy on Platform.sh" width="170px" />
     </a>
 </p>
@@ -92,7 +92,7 @@ This will automatically create a new project and initialize the repository for y
 You can also quickly recreate this project locally with the following command:
 
 ```bash
-composer create-project platformsh/drupal10 -s dev
+composer create-project platformsh/drupal11 -s dev
 ```
 
 
@@ -107,12 +107,12 @@ composer create-project platformsh/drupal10 -s dev
 For all of the other options below, clone this repository first:
 
 ```bash
-git clone https://github.com/platformsh-templates/drupal10
+git clone https://github.com/platformsh-templates/drupal11
 ```
 
-If you're trying to deploy from GitHub, you can generate a copy of this repository first in your own namespace by clicking the [Use this template](https://github.com/platformsh-templates/drupal10/generate) button at the top of this page.
+If you're trying to deploy from GitHub, you can generate a copy of this repository first in your own namespace by clicking the [Use this template](https://github.com/platformsh-templates/drupal11/generate) button at the top of this page.
 
-Then you can clone a copy of it locally with `git clone git@github.com:YOUR_NAMESPACE/drupal10.git`.
+Then you can clone a copy of it locally with `git clone git@github.com:YOUR_NAMESPACE/drupal11.git`.
 
 
 <details>
@@ -283,7 +283,7 @@ Run through the Drupal installer as normal.  You will not be asked for database 
 
 ### Local development
 
-This section provides instructions for running the `drupal10` template locally, connected to a live database instance on an active Platform.sh environment.
+This section provides instructions for running the `drupal11` template locally, connected to a live database instance on an active Platform.sh environment.
 
 In all cases for developing with Platform.sh, it's important to develop on an isolated environment - do not connect to data on your production environment when developing locally.
 Each of the options below assume that you have already deployed this template to Platform.sh, as well as the following starting commands:
@@ -302,7 +302,7 @@ ddev provides an integration with Platform.sh that makes it simple to develop Dr
 In general, the steps are as follows:
 
 1. [Install ddev](https://ddev.readthedocs.io/en/stable/#installation).
-1. A configuration file has already been provided at `.ddev/providers/platform.yaml`, so you should not need to run `ddev config`.
+1. Run `ddev config`.
 1. [Retrieve an API token](https://docs.platform.sh/development/cli/api-tokens.html#get-a-token) for your organization via the management console.
 1. Update your dedev global configuration file to use the token you've just retrieved:
     ```yaml
@@ -366,7 +366,7 @@ If you already have a codebase you are trying to migrate, move onto the next ste
 
 
 ```bash
-$ mkdir drupal10 && cd drupal10
+$ mkdir drupal11 && cd drupal11
 $ git init
 $ git remote add upstream https://github.com/drupal/recommended-project.git
 $ git branch -m main
@@ -803,9 +803,9 @@ See something that's wrong with this template that needs to be fixed? Something 
 <p align="center">
 <strong>How to contribute</strong>
 <br /><br />
-<a href="https://github.com/platformsh-templates/drupal10/issues/new?assignees=&labels=bug&template=bug_report.yml"><strong>Report a bug</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="https://github.com/platformsh-templates/drupal10/issues/new?assignees=&labels=feature+request&template=improvements.yml"><strong>Submit a feature request</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="https://github.com/platformsh-templates/drupal10/pulls"><strong>Open a pull request</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="https://github.com/platformsh-templates/drupal11/issues/new?assignees=&labels=bug&template=bug_report.yml"><strong>Report a bug</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="https://github.com/platformsh-templates/drupal11/issues/new?assignees=&labels=feature+request&template=improvements.yml"><strong>Submit a feature request</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="https://github.com/platformsh-templates/drupal11/pulls"><strong>Open a pull request</strong></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 <br />
 </p>
 <br />
@@ -820,8 +820,8 @@ See something that's wrong with this template that needs to be fixed? Something 
 <h3 align="center"><strong>Thanks to all of our amazing contributors!</strong></h3>
 <br/>
 <p align="center">
-<a href="https://github.com/platformsh-templates/drupal10/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=platformsh-templates/drupal10" />
+<a href="https://github.com/platformsh-templates/drupal11/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=platformsh-templates/drupal11" />
 </a>
 </p>
 
