@@ -739,7 +739,7 @@ This template includes a starting [`.blackfire.yml`](.blackfire.yml) file that c
 
 
 - [Drupal](https://www.drupal.org/)
-- [Drupal 9 on Platform.sh](https://docs.platform.sh/guides/drupal9/deploy.html)
+- [Drupal on Platform.sh](https://docs.platform.sh/guides/drupal/deploy.html)
 - [Platform.sh PHP documentation](https://docs.platform.sh/languages/php.html)
 
 
