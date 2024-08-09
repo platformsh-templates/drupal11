@@ -28,26 +28,24 @@ scenarioPaths.paths = [
     {
         "label": "Home",
         "delay": 2000,
-        "removeSelectors": ['#block-umami-footer-promo img']
+        "removeSelectors": ['#header']
     },
     {
         "label": "Forced 404",
         "delay": 2000,
+        "removeSelectors": ['#header']
     },
     {
-        "label":"Vegan chocolate and nut brownies",
-        "path": "en/recipes/vegan-chocolate-and-nut-brownies/",
+        "label":"Log in page",
+        "path": "user/login",
         "delay": 2000,
+        "removeSelectors": ['#header']
     },
     {
-        "label": "Category: Healthy",
-        "path": "en/tags/healthy/",
+        "label": "Search",
+        "path": "search/node?keys=foobar",
         "delay": 2000,
-    },
-    {
-        "label": "All Articles",
-        "path": "en/articles/",
-        "delay": 2000,
+        "removeSelectors": ['#header']
     }
 ];
 
