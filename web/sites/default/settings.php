@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Platform.sh example settings.php file for Drupal 10.
+ * Platform.sh example settings.php file for Drupal 11.
  */
 
 // Default Drupal settings.
@@ -9,7 +9,7 @@
 // These are already explained with detailed comments in Drupal's
 // default.settings.php file.
 //
-// See https://api.drupal.org/api/drupal/sites!default!default.settings.php/10
+// See https://api.drupal.org/api/drupal/sites!default!default.settings.php/11
 $databases = [];
 $config_directories = [];
 $settings['update_free_access'] = FALSE;
@@ -18,6 +18,8 @@ $settings['file_scan_ignore_directories'] = [
   'node_modules',
   'bower_components',
 ];
+// @see https://www.drupal.org/node/3177901
+$settings['state_cache'] = TRUE;
 
 // The hash_salt should be a unique random value for each application.
 // If left unset, the settings.platformsh.php file will attempt to provide one.

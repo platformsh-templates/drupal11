@@ -62,8 +62,8 @@ Drupal is a flexible and extensible PHP-based CMS framework.
 
 ### Features
 
-- PHP 8.3
-- MariaDB 10.6
+- PHP 8.2
+- MariaDB 10.11
 - Redis 7.2
 - Drush included
 - Automatic TLS certificates
@@ -302,7 +302,7 @@ ddev provides an integration with Platform.sh that makes it simple to develop Dr
 In general, the steps are as follows:
 
 1. [Install ddev](https://ddev.readthedocs.io/en/stable/#installation).
-1. Run `ddev config`.
+1. A configuration file has already been provided at `.ddev/providers/platform.yaml`, so you should not need to run `ddev config`.
 1. [Retrieve an API token](https://docs.platform.sh/development/cli/api-tokens.html#get-a-token) for your organization via the management console.
 1. Update your dedev global configuration file to use the token you've just retrieved:
     ```yaml
@@ -739,7 +739,7 @@ This template includes a starting [`.blackfire.yml`](.blackfire.yml) file that c
 
 
 - [Drupal](https://www.drupal.org/)
-- [Drupal on Platform.sh](https://docs.platform.sh/guides/drupal/deploy.html)
+- [Drupal 9 on Platform.sh](https://docs.platform.sh/guides/drupal9/deploy.html)
 - [Platform.sh PHP documentation](https://docs.platform.sh/languages/php.html)
 
 
