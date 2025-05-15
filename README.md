@@ -56,14 +56,14 @@
 
 ## About
 
-This template builds Drupal 10 using the "Drupal Recommended" Composer project. It is pre-configured to use MariaDB and Redis for caching. The Drupal installer will skip asking for database credentials as they are already provided.
+This template builds Drupal 11 using the "Drupal Recommended" Composer project. It is pre-configured to use MariaDB and Redis for caching. The Drupal installer will skip asking for database credentials as they are already provided.
 
 Drupal is a flexible and extensible PHP-based CMS framework.
 
 ### Features
 
 - PHP 8.3
-- MariaDB 10.6
+- MariaDB 10.11
 - Redis 7.2
 - Drush included
 - Automatic TLS certificates
@@ -372,7 +372,7 @@ $ git remote add upstream https://github.com/drupal/recommended-project.git
 $ git branch -m main
 $ git fetch --all --depth=2
 $ git fetch --all --tags
-$ git merge --allow-unrelated-histories -X theirs 10.0.0-rc1
+$ git merge --allow-unrelated-histories -X theirs 11.x
 
 ```
 
