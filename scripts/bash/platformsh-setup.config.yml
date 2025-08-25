@@ -1,0 +1,6 @@
+# platformsh-setup.config.yml
+#
+# Notes:
+# - The project_id is a character string provided by Platform.sh.
+
+project_id: "PASTE PROJECT ID HERE"
