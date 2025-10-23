@@ -50,7 +50,8 @@ mounts:
         source: local
         source_path: 'drush-backups'
 
-# Configuration of the build of this application.
+# Specifies a default set of build tasks to run. Flavors are language-specific.
+# More information: https://docs.platform.sh/create-apps/app-reference.html#build
 build:
     flavor: composer
 
@@ -145,17 +146,6 @@ web:
 # Outbound firewall rules for the application. More information: https://docs.platform.sh/create-apps/app-reference.html#firewall
 # firewall:
 
-# Specifies a default set of build tasks to run. Flavors are language-specific.
-# More information: https://docs.platform.sh/create-apps/app-reference.html#build
-
-# Installs global dependencies as part of the build process. They’re independent of your app’s dependencies and
-# are available in the PATH during the build process and in the runtime environment. They’re installed before
-# the build hook runs using a package manager for the language.
-# More information: https://docs.platform.sh/create-apps/app-reference.html#dependencies
-dependencies:
-    php:
-        composer/composer: "^2.7.0"
-
 # Hooks allow you to customize your code/environment as the project moves through the build and deploy stages
 # More information: https://docs.platform.sh/create-apps/app-reference.html#hooks
 hooks:
@@ -169,13 +159,17 @@ hooks:
     # fast.
     deploy: |
         set -e
-        php ./drush/platformsh_generate_drush_yml.php
-        # if drupal is installed, will call the following drush commands:
-        #   - `cache-rebuild`
-        #   - `updatedb`
-        #   - and if config files are present, `config-import`
-        cd web
-        bash $PLATFORM_APP_DIR/drush/platformsh_deploy_drupal.sh
+        if [ -n "$(drush status --field=bootstrap)" ]; then
+            drush -y cache-rebuild
+            drush -y updatedb
+            if [ -n "$(ls $(drush php:eval "echo realpath(Drupal\Core\Site\Settings::get('config_sync_directory'));")/*.yml 2>/dev/null)" ]; then
+                drush -y config-import
+            else
+                echo "No config to import. Skipping."
+            fi
+        else
+            echo "Drupal not installed. Skipping standard Drupal deploy steps"
+        fi
 
     # The post_deploy hook is run after the app container has been started and after it has started accepting requests.
     # More information: https://docs.platform.sh/create-apps/hooks/hooks-comparison.html#deploy-hook
